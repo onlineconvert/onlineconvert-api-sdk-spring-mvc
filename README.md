@@ -1,4 +1,4 @@
-# Online Convert API2 [] SDK
+# Online Convert API2 SpringMVC SDK
 
 This SDK provides a code base to interact with the API2 for [Online Convert](http://www.online-convert.com/). 
 
