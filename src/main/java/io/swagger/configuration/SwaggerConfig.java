@@ -24,9 +24,9 @@ public class SwaggerConfig {
         ApiInfo apiInfo = new ApiInfo(
         "Online Convert",
         "",
-        "2.0.0",
+        "2.0.1",
         "",
-        "",
+        "time2talk@online-convert.com",
         "",
         "" );
         return apiInfo;

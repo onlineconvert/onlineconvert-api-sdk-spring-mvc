@@ -51,10 +51,10 @@ public class JobsApi {
 
 ,
     
-@ApiParam(value = "Token for authentication."  ) @RequestHeader(value="token", required=false) String token
+@ApiParam(value = "Token for authentication for the current job"  ) @RequestHeader(value="xOcToken", required=false) String xOcToken
 ,
     
-@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="key", required=false) String key
+@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="xOcApiKey", required=false) String xOcApiKey
 ,
     @ApiParam(value = "Pagination for list of elements.", defaultValue = "1") @RequestParam(value = "page", required = false, defaultValue="1") BigDecimal page
 
@@ -78,7 +78,7 @@ public class JobsApi {
     
     method = RequestMethod.POST)
   public ResponseEntity<Job> jobsPost(
-@ApiParam(value = "Api key for the user to filter." ,required=true ) @RequestHeader(value="key", required=true) String key
+@ApiParam(value = "Api key for the user to filter." ,required=true ) @RequestHeader(value="xOcApiKey", required=true) String xOcApiKey
 ,
     
 
@@ -100,10 +100,10 @@ public class JobsApi {
     
     method = RequestMethod.GET)
   public ResponseEntity<Job> jobsJobIdGet(
-@ApiParam(value = "Token for authentication."  ) @RequestHeader(value="token", required=false) String token
+@ApiParam(value = "Token for authentication for the current job"  ) @RequestHeader(value="xOcToken", required=false) String xOcToken
 ,
     
-@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="key", required=false) String key
+@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="xOcApiKey", required=false) String xOcApiKey
 ,
     
 @ApiParam(value = "ID of job that needs to be fetched",required=true ) @PathVariable("jobId") String jobId
@@ -125,10 +125,10 @@ public class JobsApi {
     
     method = RequestMethod.DELETE)
   public ResponseEntity<Job> jobsJobIdDelete(
-@ApiParam(value = "Token for authentication."  ) @RequestHeader(value="token", required=false) String token
+@ApiParam(value = "Token for authentication for the current job"  ) @RequestHeader(value="xOcToken", required=false) String xOcToken
 ,
     
-@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="key", required=false) String key
+@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="xOcApiKey", required=false) String xOcApiKey
 ,
     
 @ApiParam(value = "ID of job that needs to be fetched",required=true ) @PathVariable("jobId") String jobId
@@ -154,10 +154,10 @@ public class JobsApi {
 
 @ApiParam(value = "Content of the job." ,required=true ) Job body,
     
-@ApiParam(value = "Token for authentication."  ) @RequestHeader(value="token", required=false) String token
+@ApiParam(value = "Token for authentication for the current job"  ) @RequestHeader(value="xOcToken", required=false) String xOcToken
 ,
     
-@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="key", required=false) String key
+@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="xOcApiKey", required=false) String xOcApiKey
 ,
     
 @ApiParam(value = "ID of job that needs to be fetched",required=true ) @PathVariable("jobId") String jobId
@@ -179,10 +179,10 @@ public class JobsApi {
     
     method = RequestMethod.GET)
   public ResponseEntity<Conversion> jobsJobIdConversionsGet(
-@ApiParam(value = "Token for authentication."  ) @RequestHeader(value="token", required=false) String token
+@ApiParam(value = "Token for authentication for the current job"  ) @RequestHeader(value="xOcToken", required=false) String xOcToken
 ,
     
-@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="key", required=false) String key
+@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="xOcApiKey", required=false) String xOcApiKey
 ,
     
 @ApiParam(value = "ID of job that needs to be fetched",required=true ) @PathVariable("jobId") String jobId
@@ -207,10 +207,10 @@ public class JobsApi {
 
 @ApiParam(value = "information for the conversion." ,required=true ) Conversion body,
     
-@ApiParam(value = "Token for authentication."  ) @RequestHeader(value="token", required=false) String token
+@ApiParam(value = "Token for authentication for the current job"  ) @RequestHeader(value="xOcToken", required=false) String xOcToken
 ,
     
-@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="key", required=false) String key
+@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="xOcApiKey", required=false) String xOcApiKey
 ,
     
 @ApiParam(value = "ID of job that needs to be fetched",required=true ) @PathVariable("jobId") String jobId
@@ -232,10 +232,10 @@ public class JobsApi {
     
     method = RequestMethod.GET)
   public ResponseEntity<Conversion> jobsJobIdConversionsConversionIdGet(
-@ApiParam(value = "Token for authentication."  ) @RequestHeader(value="token", required=false) String token
+@ApiParam(value = "Token for authentication for the current job"  ) @RequestHeader(value="xOcToken", required=false) String xOcToken
 ,
     
-@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="key", required=false) String key
+@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="xOcApiKey", required=false) String xOcApiKey
 ,
     
 @ApiParam(value = "ID of job that needs to be fetched",required=true ) @PathVariable("jobId") String jobId
@@ -260,10 +260,10 @@ public class JobsApi {
     
     method = RequestMethod.DELETE)
   public ResponseEntity<Conversion> jobsJobIdConversionsConversionIdDelete(
-@ApiParam(value = "Token for authentication."  ) @RequestHeader(value="token", required=false) String token
+@ApiParam(value = "Token for authentication for the current job"  ) @RequestHeader(value="xOcToken", required=false) String xOcToken
 ,
     
-@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="key", required=false) String key
+@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="xOcApiKey", required=false) String xOcApiKey
 ,
     
 @ApiParam(value = "ID of job that needs to be fetched",required=true ) @PathVariable("jobId") String jobId
@@ -288,10 +288,10 @@ public class JobsApi {
     
     method = RequestMethod.GET)
   public ResponseEntity<InputFile> jobsJobIdInputGet(
-@ApiParam(value = "Token for authentication."  ) @RequestHeader(value="token", required=false) String token
+@ApiParam(value = "Token for authentication for the current job"  ) @RequestHeader(value="xOcToken", required=false) String xOcToken
 ,
     
-@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="key", required=false) String key
+@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="xOcApiKey", required=false) String xOcApiKey
 ,
     
 @ApiParam(value = "ID of job that needs to be fetched",required=true ) @PathVariable("jobId") String jobId
@@ -316,10 +316,10 @@ public class JobsApi {
 
 @ApiParam(value = ""  ) InputFile body,
     
-@ApiParam(value = "Token for authentication."  ) @RequestHeader(value="token", required=false) String token
+@ApiParam(value = "Token for authentication for the current job"  ) @RequestHeader(value="xOcToken", required=false) String xOcToken
 ,
     
-@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="key", required=false) String key
+@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="xOcApiKey", required=false) String xOcApiKey
 ,
     
 @ApiParam(value = "ID of job that needs to be fetched",required=true ) @PathVariable("jobId") String jobId
@@ -341,10 +341,10 @@ public class JobsApi {
     
     method = RequestMethod.GET)
   public ResponseEntity<InputFile> jobsJobIdInputFileIdGet(
-@ApiParam(value = "Token for authentication."  ) @RequestHeader(value="token", required=false) String token
+@ApiParam(value = "Token for authentication for the current job"  ) @RequestHeader(value="xOcToken", required=false) String xOcToken
 ,
     
-@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="key", required=false) String key
+@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="xOcApiKey", required=false) String xOcApiKey
 ,
     
 @ApiParam(value = "ID of job that needs to be fetched",required=true ) @PathVariable("jobId") String jobId
@@ -369,10 +369,10 @@ public class JobsApi {
     
     method = RequestMethod.DELETE)
   public ResponseEntity<InputFile> jobsJobIdInputFileIdDelete(
-@ApiParam(value = "Token for authentication."  ) @RequestHeader(value="token", required=false) String token
+@ApiParam(value = "Token for authentication for the current job"  ) @RequestHeader(value="xOcToken", required=false) String xOcToken
 ,
     
-@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="key", required=false) String key
+@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="xOcApiKey", required=false) String xOcApiKey
 ,
     
 @ApiParam(value = "ID of job that needs to be fetched",required=true ) @PathVariable("jobId") String jobId
@@ -403,10 +403,10 @@ public class JobsApi {
 
 ,
     
-@ApiParam(value = "Token for authentication."  ) @RequestHeader(value="token", required=false) String token
+@ApiParam(value = "Token for authentication for the current job"  ) @RequestHeader(value="xOcToken", required=false) String xOcToken
 ,
     
-@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="key", required=false) String key
+@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="xOcApiKey", required=false) String xOcApiKey
 ,
     
 @ApiParam(value = "ID of job that needs to be fetched",required=true ) @PathVariable("jobId") String jobId
@@ -428,10 +428,10 @@ public class JobsApi {
     
     method = RequestMethod.GET)
   public ResponseEntity<OutputFile> jobsJobIdOutputFileIdGet(
-@ApiParam(value = "Token for authentication."  ) @RequestHeader(value="token", required=false) String token
+@ApiParam(value = "Token for authentication for the current job"  ) @RequestHeader(value="xOcToken", required=false) String xOcToken
 ,
     
-@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="key", required=false) String key
+@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="xOcApiKey", required=false) String xOcApiKey
 ,
     
 @ApiParam(value = "ID of job that needs to be fetched",required=true ) @PathVariable("jobId") String jobId
@@ -456,10 +456,10 @@ public class JobsApi {
     
     method = RequestMethod.DELETE)
   public ResponseEntity<OutputFile> jobsJobIdOutputFileIdDelete(
-@ApiParam(value = "Token for authentication."  ) @RequestHeader(value="token", required=false) String token
+@ApiParam(value = "Token for authentication for the current job"  ) @RequestHeader(value="xOcToken", required=false) String xOcToken
 ,
     
-@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="key", required=false) String key
+@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="xOcApiKey", required=false) String xOcApiKey
 ,
     
 @ApiParam(value = "ID of job that needs to be fetched",required=true ) @PathVariable("jobId") String jobId
@@ -484,10 +484,10 @@ public class JobsApi {
     
     method = RequestMethod.GET)
   public ResponseEntity<Thread> jobsJobIdThreadsGet(
-@ApiParam(value = "Token for authentication."  ) @RequestHeader(value="token", required=false) String token
+@ApiParam(value = "Token for authentication for the current job"  ) @RequestHeader(value="xOcToken", required=false) String xOcToken
 ,
     
-@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="key", required=false) String key
+@ApiParam(value = "Api key for the user to filter."  ) @RequestHeader(value="xOcApiKey", required=false) String xOcApiKey
 ,
     
 @ApiParam(value = "ID of job that needs to be fetched",required=true ) @PathVariable("jobId") String jobId
